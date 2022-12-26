@@ -1,0 +1,75 @@
+* {
+   margin:0px;
+   padding:0px;
+   box-sizing: border-box;
+   font-family: sans-serif;
+   transition: all 0.35s linear;
+}
+
+section {
+   display: grid;
+   place-content: center;
+   min-height: 100vh;
+   background-color: #111;
+}
+
+.loader{
+   width:20rem;
+   height: 20rem;
+   position: relative;
+}
+.loader span{
+   background-color: #242424;
+   position: absolute;
+   width: 4rem;
+   height: 3px;
+   display: block;
+   transform: rotateZ(calc(1deg * var(--i)));
+   transform-origin: 10rem;
+   top:10rem;
+   animation: gradient 1.8s infinite linear;
+   animation-delay: calc(5ms * var(--i));
+}
+
+@keyframes gradient {
+0%,
+100%{
+   background-color: #ff0000;
+}
+10%{
+   background-color: #ff7700;
+}
+20%{
+   background-color: #ffff00;
+}   
+30%{
+   background-color: #9dff00;
+}   
+40%{
+   background-color: #00ff00;
+}   
+50%{
+   background-color: #00ffaa;
+}   
+60%{
+   background-color: #00d9ff;
+}   
+70%{
+   background-color: #2043ff;
+}   
+80%{
+   background-color: #7746ff;
+}   
+90%{
+   background-color: #fb00ff;
+}   
+}
+
+@media screen and (max-width: 654px){
+   .loader span{
+      transform-origin: 8rem;
+   }
+   .loader{
+      width: 16rem;
+   }
+}

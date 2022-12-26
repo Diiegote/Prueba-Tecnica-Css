@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Gradient Loading animation</title>
+   <meta charset="UTF-8">
+   <meta name="keywords" content="css,html,animation">
+   <meta name="description" content="Prueba tecnica de html y css">
+   <meta name="author" content="Diego Martinotti">
+   <meta name="robots" content="index">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <link rel="stylesheet" href="./main.css"/> 
+</head>
+<body>
+   <section>
+      <div class="loader"></div>
+   </section>
+   <script>
+      var max=360;
+      var loader= document.querySelector(".loader");
+
+      for(let i=0; i < max; i++){
+         span=document.createElement("span");
+         span.style.setProperty("--i",i);
+
+         loader.append(span);
+      }
+      console.log(loader.children);
+   </script>
+</body>
+</html>
